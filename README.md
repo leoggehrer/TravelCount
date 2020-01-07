@@ -4,7 +4,7 @@ Das ist die erste Zeile.
 Das ist die zweite Zeile.  
 ## Schnittstellen für die Entitäten
 
-![Contracts](Contracts.png)
+![Contracts](Contracts.PNG)
 
 
 ## Nächstes Kapitel
