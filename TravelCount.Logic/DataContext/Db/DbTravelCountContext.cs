@@ -145,7 +145,6 @@ namespace TravelCount.Logic.DataContext.Db
                 .HasMaxLength(256);
             modelBuilder.Entity<Travel>()
                 .Property(p => p.Description)
-                .IsRequired()
                 .HasMaxLength(256);
             modelBuilder.Entity<Travel>()
                 .Property(p => p.Currency)

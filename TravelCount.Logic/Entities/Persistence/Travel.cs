@@ -18,7 +18,7 @@ namespace TravelCount.Logic.Entities.Persistence
 
             Id = other.Id;
             Designation = other.Designation;
-            Designation = other.Description;
+            Description = other.Description;
             Currency = other.Currency;
             Friends = other.Friends;
             Category = other.Category;

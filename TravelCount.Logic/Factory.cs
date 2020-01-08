@@ -1,8 +1,6 @@
 ﻿//@DomainCode
 //MdStart
 using System;
-using System.Collections.Generic;
-using System.Text;
 using TravelCount.Contracts.Client;
 
 namespace TravelCount.Logic
