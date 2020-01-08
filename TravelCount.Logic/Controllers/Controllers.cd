@@ -31,7 +31,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TravelCount.Logic.Controllers.Persistence.ExpenseController">
-    <Position X="4.25" Y="6.75" Width="1.5" />
+    <Position X="4" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controllers\Persistence\ExpenseController.cs</FileName>
