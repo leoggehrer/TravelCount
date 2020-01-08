@@ -1,4 +1,6 @@
-﻿namespace TravelCount.Contracts
+﻿//@BaseCode
+//MdStart
+namespace TravelCount.Contracts
 {
 	/// <summary>
 	/// Defines a generalized copying method for all properties defined by the Type T.
@@ -9,3 +11,4 @@
 		void CopyProperties(T other);
 	}
 }
+//MdEnd

@@ -1,4 +1,6 @@
-﻿using System;
+﻿//@BaseCode
+//MdStart
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -56,3 +58,4 @@ namespace TravelCount.Contracts.Client
         #endregion Async-Methods
     }
 }
+//MdEnd

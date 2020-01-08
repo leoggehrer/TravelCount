@@ -1,4 +1,6 @@
-﻿namespace TravelCount.Contracts
+﻿//@BaseCode
+//MdStart
+namespace TravelCount.Contracts
 {
     /// <summary>
     /// Defines the basic properties of identifiable components.
@@ -11,3 +13,4 @@
         int Id { get; }
     }
 }
+//MdEnd

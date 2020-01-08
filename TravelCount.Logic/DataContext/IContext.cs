@@ -1,6 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿//@BaseCode
+//MdStart
+using System;
 using System.Threading.Tasks;
 using TravelCount.Contracts;
 using TravelCount.Logic.Entities;
@@ -34,3 +34,4 @@ namespace TravelCount.Logic.DataContext
         #endregion Async-Methods
     }
 }
+//MdEnd

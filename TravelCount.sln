@@ -3,18 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelCount.Contracts", "TravelCount.Contracts\TravelCount.Contracts.csproj", "{4B5C1528-D30F-425D-96DC-F377CF4D821A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelCount.Contracts", "TravelCount.Contracts\TravelCount.Contracts.csproj", "{4B5C1528-D30F-425D-96DC-F377CF4D821A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonBase", "CommonBase\CommonBase.csproj", "{CE95F62E-FD32-4663-9F8B-D9F72DAF798C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonBase", "CommonBase\CommonBase.csproj", "{CE95F62E-FD32-4663-9F8B-D9F72DAF798C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelCount.Logic", "TravelCount.Logic\TravelCount.Logic.csproj", "{F5929701-58CF-4A71-83B9-AAE5562E567B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelCount.Logic", "TravelCount.Logic\TravelCount.Logic.csproj", "{F5929701-58CF-4A71-83B9-AAE5562E567B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelCount.ConApp", "TravelCount.ConApp\TravelCount.ConApp.csproj", "{7E20034A-0149-41C8-9289-CCC8FDD52A09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelCount.ConApp", "TravelCount.ConApp\TravelCount.ConApp.csproj", "{7E20034A-0149-41C8-9289-CCC8FDD52A09}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{65F328D9-9323-4047-A9F4-B4E3F38F33FF}"
 	ProjectSection(SolutionItems) = preProject
 		Contracts.png = Contracts.png
 		Entities.png = Entities.png
+		Installation.md = Installation.md
 		README.md = README.md
 	EndProjectSection
 EndProject
