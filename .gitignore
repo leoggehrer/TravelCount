@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+#Exclude subfolder
+!Migrations/*
+
 # User-specific files
 *.rsuser
 *.suo
@@ -47,7 +50,7 @@ TestResult.xml
 [Dd]ebugPS/
 [Rr]eleasePS/
 dlldata.c
-[Mm]igrations/
+
 
 # Benchmark Results
 BenchmarkDotNet.Artifacts/
