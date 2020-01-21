@@ -8,7 +8,7 @@ namespace TravelCount.Logic.Controllers.Persistence
        where E : Entities.IdentityObject, I, Contracts.ICopyable<I>, new()
        where I : Contracts.IIdentifiable
     {
-        protected ITravelCountContext TravelCountContext => (ITravelCountContext)Context;
+        internal ITravelCountContext TravelCountContext => (ITravelCountContext)Context;
 
         protected TravelCountController(IContext context)
             : base(context)

@@ -6,6 +6,7 @@ namespace TravelCount.Contracts.Persistence
 {
     public interface ITravel : IIdentifiable, ICopyable<ITravel>
     {
+        new int Id { get; }
         string Designation { get; set; }
         string Description { get; set; }
         string Currency { get; set; }

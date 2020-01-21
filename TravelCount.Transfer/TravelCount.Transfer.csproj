@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CommonBase\CommonBase.csproj" />
+    <ProjectReference Include="..\TravelCount.Contracts\TravelCount.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
