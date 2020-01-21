@@ -19,10 +19,5 @@ Jetzt kommt die Aufzählung:
 
 Jetzt wird wieder in einer neuen Zeile geschrieben.  
 Dieses Wort **CSharp** wird in fett geschrieben.  
-```csharp
-class Person
-{
-  public string Name { get; set;}
-}
-```  
+
 Die Eigenschaft *'Name'* setzt oder liefert den Namen der Person. 
