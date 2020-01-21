@@ -2,17 +2,17 @@
 
 Das ist die erste Zeile.  
 Das ist die zweite Zeile.  
-## Schnittstellen f¸r die Entit‰ten
+## Schnittstellen f√ºr die Entit√§ten
 
 ![Contracts](Contracts.png)
 
-## Klassendiagramm der Entit‰ten
+## Klassendiagramm der Entit√§ten
 
 ![Entities](Entities.png)
 
-## N‰chstes Kapitel
+## N√§chstes Kapitel
 Das ist eine lange Zeile mit viel Text und dieser soll automatisch umgebrochen werden.  
-Jetzt kommt die Aufz‰hlung:  
+Jetzt kommt die Aufz√§hlung:  
 + Erster Punkt
 + Zwiter Punkt
 + usw.  
