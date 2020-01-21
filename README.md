@@ -4,11 +4,7 @@ Das ist die erste Zeile.
 Das ist die zweite Zeile.  
 ## Schnittstellen für die Entitäten
 
-![Contracts](Contracts.png)
-
 ## Klassendiagramm der Entitäten
-
-![Entities](Entities.png)
 
 ## Nächstes Kapitel
 Das ist eine lange Zeile mit viel Text und dieser soll automatisch umgebrochen werden.  
