@@ -37,6 +37,10 @@ namespace TravelCount.Logic
             {
                 result = (IControllerAccess<T>)CreateExpenseController();
             }
+            else if (typeof(T) == typeof(Contracts.Business.ITravelExpense))
+            {
+                result = (IControllerAccess<T>)CreateTravelExpenseController();
+            }
             return result;
         }
         public static IControllerAccess<T> Create<T>(object sharedController) where T : Contracts.IIdentifiable
@@ -50,6 +54,10 @@ namespace TravelCount.Logic
             else if (typeof(T) == typeof(Contracts.Persistence.IExpense))
             {
                 result = (IControllerAccess<T>)CreateExpenseController(sharedController);
+            }
+            else if (typeof(T) == typeof(Contracts.Business.ITravelExpense))
+            {
+                result = (IControllerAccess<T>)CreateTravelExpenseController(sharedController);
             }
             return result;
         }
@@ -83,6 +91,15 @@ namespace TravelCount.Logic
         public static IControllerAccess<Contracts.Business.ITravelExpense> CreateTravelExpenseController()
         {
             return new Controllers.Business.TravelExpenseController(CreateContext());
+        }
+        public static IControllerAccess<Contracts.Business.ITravelExpense> CreateTravelExpenseController(object sharedController)
+        {
+            if (sharedController == null)
+                throw new ArgumentNullException(nameof(sharedController));
+
+            Controllers.ControllerObject controller = (Controllers.ControllerObject)sharedController;
+
+            return new Controllers.Business.TravelExpenseController(controller);
         }
     }
 }

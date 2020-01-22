@@ -22,6 +22,12 @@ namespace TravelCount.Logic.Controllers.Business
             travelController = new TravelController(this);
             expenseController = new ExpenseController(this);
         }
+        public TravelExpenseController(ControllerObject controller)
+            : base(controller)
+        {
+            travelController = new TravelController(this);
+            expenseController = new ExpenseController(this);
+        }
 
         public Task<int> CountAsync()
         {

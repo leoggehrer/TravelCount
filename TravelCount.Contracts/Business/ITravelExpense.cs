@@ -12,13 +12,11 @@ namespace TravelCount.Contracts.Business
         double TotalExpense { get; }
         double FriendPortion { get; }
         int NumberOfFriends { get; }
-
+        string[] Friends { get; }
+        double[] FriendAmounts { get; }
+        IEnumerable<IBalance> Balances { get; }
         IExpense CreateExpense();
         void Add(IExpense expense);
         void Remove(IExpense expense);
-
-        string[] GetFriends();
-        double GetTotalExpenseBy(string friend);
-        IEnumerable<IBalance> CalculateBalance();
     }
 }

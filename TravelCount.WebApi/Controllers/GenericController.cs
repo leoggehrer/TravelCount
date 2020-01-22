@@ -20,20 +20,25 @@ namespace TravelCount.WebApi.Controllers
 
             return await ctrl.CountAsync();
         }
-        protected async Task<IEnumerable<I>> GetAllAsync()
+        protected async Task<IEnumerable<I>> GetModelsAsync()
         {
             using var ctrl = CreateController();
 
             return (await ctrl.GetAllAsync()).ToList();
         }
-        protected async Task<I> GetByIdAsync(int id)
+        protected async Task<I> GetModelByIdAsync(int id)
         {
             using var ctrl = CreateController();
 
             return await ctrl.GetByIdAsync(id);
         }
+        protected async Task<I> CreateModelAsync()
+        {
+            using var ctrl = CreateController();
 
-        protected async Task<I> InsertAsync(M model)
+            return await ctrl.CreateAsync();
+        }
+        protected async Task<I> InsertModelAsync(M model)
         {
             using var ctrl = CreateController();
 
@@ -42,7 +47,7 @@ namespace TravelCount.WebApi.Controllers
             await ctrl.SaveChangesAsync();
             return result;
         }
-        protected async Task<I> UpdateAsync(M model)
+        protected async Task<I> UpdateModelAsync(M model)
         {
             using var ctrl = CreateController();
 
@@ -51,7 +56,7 @@ namespace TravelCount.WebApi.Controllers
             await ctrl.SaveChangesAsync();
             return result;
         }
-        protected async Task DeleteAsync(int id)
+        protected async Task DeleteModelAsync(int id)
         {
             using var ctrl = CreateController();
 

@@ -1,8 +1,7 @@
-﻿using CommonBase.Extensions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using CommonBase.Extensions;
 using TravelCount.Contracts.Business;
 using TravelCount.Contracts.Persistence;
 using TravelCount.Logic.Entities.Persistence;
@@ -60,7 +59,9 @@ namespace TravelCount.Logic.Entities.Business
                 return result;
             }
         }
-
+        public string[] Friends => GetFriends();
+        public double[] FriendAmounts => Friends.Select(i => GetTotalExpenseBy(i)).ToArray();
+        public IEnumerable<IBalance> Balances => CalculateBalance();
         public void CopyProperties(ITravelExpense other)
         {
             other.CheckArgument(nameof(other));
