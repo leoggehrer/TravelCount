@@ -18,35 +18,35 @@ namespace TravelCount.WebApi.Controllers
 
 		// GET: api/Item
 		[HttpGet("/api/[controller]/Get")]
-		public Task<IEnumerable<Contract>> GetAsync()
+		public Task<IEnumerable<Model>> GetAsync()
 		{
 			return GetModelsAsync();
 		}
 
 		// GET: api/Item/5
 		[HttpGet("/api/[controller]/Get/{id}")]
-		public Task<Contract> GetAsync(int id)
+		public Task<Model> GetAsync(int id)
 		{
 			return GetModelByIdAsync(id);
 		}
 
 		// GET: api/Item/5
 		[HttpGet("/api/[controller]/create")]
-		public Task<Contract> GetCreateAsync()
+		public Task<Model> GetCreateAsync()
 		{
 			return CreateModelAsync();
 		}
 
 		// POST: api/Item/5
 		[HttpPost("/api/[controller]")]
-		public Task<Contract> PostAsync(Model model)
+		public Task<Model> PostAsync(Model model)
 		{
 			return InsertModelAsync(model);
 		}
 
 		// POST: api/Item/5
 		[HttpPut("/api/[controller]")]
-		public Task<Contract> PutAsync(Model model)
+		public Task<Model> PutAsync(Model model)
 		{
 			return UpdateModelAsync(model);
 		}

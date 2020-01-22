@@ -83,6 +83,7 @@ namespace TravelCount.Logic.Controllers.Business
             var result = new TravelExpense();
 
             result.TravelEntity.CopyProperties(entity.Travel);
+            await travelController.InsertAsync(result.TravelEntity);
             foreach (var item in entity.Expenses)
             {
                 var expense = new Expense();

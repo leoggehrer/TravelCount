@@ -133,11 +133,12 @@ namespace TravelCount.Logic.Entities.Business
         public IEnumerable<IBalance> CalculateBalance()
         {
             List<IBalance> result = new List<IBalance>();
-            var friendPart = TotalExpense / NumberOfFriends;
-            var friendExpenses = ExpenseEntities.GroupBy(i => i.Friend)
-                                                .Select(k => new { Friend = k.Key, Amount = k.Sum(j => j.Amount) });
-            var giveFriends = friendExpenses.Where(i => i.Amount < friendPart);
-            var getFriends = friendExpenses.Where(i => i.Amount > friendPart);
+            var friendPart = FriendPortion;
+            var friends = Friends;
+            var amounts = FriendAmounts;
+            var friendsAndAmounts = friends.Select((f, i) => new { Friend = f, Amount = amounts[i] });
+            var giveFriends = friendsAndAmounts.Where(i => i.Amount < friendPart);
+            var getFriends = friendsAndAmounts.Where(i => i.Amount > friendPart);
 
             foreach (var give in giveFriends)
             {

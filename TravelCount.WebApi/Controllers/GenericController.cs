@@ -13,6 +13,13 @@ namespace TravelCount.WebApi.Controllers
         {
             return Logic.Factory.Create<I>();
         }
+        protected M ToModel(I entity)
+        {
+            var result = new M();
+
+            result.CopyProperties(entity);
+            return result;
+        }
 
         protected async Task<int> CountAsync()
         {
@@ -20,41 +27,43 @@ namespace TravelCount.WebApi.Controllers
 
             return await ctrl.CountAsync();
         }
-        protected async Task<IEnumerable<I>> GetModelsAsync()
+        protected async Task<IEnumerable<M>> GetModelsAsync()
         {
             using var ctrl = CreateController();
 
-            return (await ctrl.GetAllAsync()).ToList();
+            return (await ctrl.GetAllAsync()).ToList().Select(i => ToModel(i));
         }
-        protected async Task<I> GetModelByIdAsync(int id)
+        protected async Task<M> GetModelByIdAsync(int id)
         {
             using var ctrl = CreateController();
 
-            return await ctrl.GetByIdAsync(id);
+            var entity = (await ctrl.GetByIdAsync(id));
+            return ToModel(entity);
         }
-        protected async Task<I> CreateModelAsync()
+        protected async Task<M> CreateModelAsync()
         {
             using var ctrl = CreateController();
 
-            return await ctrl.CreateAsync();
+            var entity = await ctrl.CreateAsync();
+            return ToModel(entity);
         }
-        protected async Task<I> InsertModelAsync(M model)
+        protected async Task<M> InsertModelAsync(M model)
         {
             using var ctrl = CreateController();
 
-            var result = await ctrl.InsertAsync(model);
+            var entity = await ctrl.InsertAsync(model);
 
             await ctrl.SaveChangesAsync();
-            return result;
+            return ToModel(entity);
         }
-        protected async Task<I> UpdateModelAsync(M model)
+        protected async Task<M> UpdateModelAsync(M model)
         {
             using var ctrl = CreateController();
 
-            var result = await ctrl.UpdateAsync(model);
+            var entity = await ctrl.UpdateAsync(model);
 
             await ctrl.SaveChangesAsync();
-            return result;
+            return ToModel(entity);
         }
         protected async Task DeleteModelAsync(int id)
         {

@@ -1,5 +1,6 @@
 ﻿using CommonBase.Extensions;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using TravelCount.Contracts;
 using TravelCount.Contracts.Business;
 using TravelCount.Contracts.Persistence;
@@ -9,9 +10,13 @@ namespace TravelCount.Transfer.Business
 {
     public class TravelExpense : TransferObject, ITravelExpense, ICopyable<ITravelExpense>
     {
-        internal Travel TravelEntity { get; } = new Travel(); 
+        [JsonPropertyName(nameof(Travel))]
+        public Travel TravelEntity { get; set; } = new Travel();
+        [JsonIgnore()]
         public ITravel Travel { get => TravelEntity; }
-        internal List<Expense> ExpenseEntities { get; } = new List<Expense>();
+        [JsonPropertyName(nameof(Expenses))]
+        public List<Expense> ExpenseEntities { get; set; } = new List<Expense>();
+        [JsonIgnore()]
         public IEnumerable<IExpense> Expenses { get => ExpenseEntities; }
 
         public override int Id { get => TravelEntity.Id; set => TravelEntity.Id = value; }
@@ -20,7 +25,7 @@ namespace TravelCount.Transfer.Business
         public int NumberOfFriends { get; set; }
         public string[] Friends { get; set; }
         public double[] FriendAmounts { get; set; }
-        public IEnumerable<IBalance> Balances { get; set; }
+        public IEnumerable<IBalance> Balances { get; private set; }
 
         public void CopyProperties(ITravelExpense other)
         {
