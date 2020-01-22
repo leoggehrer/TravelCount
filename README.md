@@ -2,27 +2,18 @@
 
 Das ist die erste Zeile.  
 Das ist die zweite Zeile.  
-## Schnittstellen für die Entitäten
+## Schnittstellen fÃ¼r die EntitÃ¤ten
 
-![Contracts](Contracts.png)
+## Klassendiagramm der EntitÃ¤ten
 
-## Klassendiagramm der Entitäten
-
-![Entities](Entities.png)
-
-## Nächstes Kapitel
+## NÃ¤chstes Kapitel
 Das ist eine lange Zeile mit viel Text und dieser soll automatisch umgebrochen werden.  
-Jetzt kommt die Aufzählung:  
+Jetzt kommt die AufzÃ¤hlung:  
 + Erster Punkt
 + Zwiter Punkt
 + usw.  
 
 Jetzt wird wieder in einer neuen Zeile geschrieben.  
 Dieses Wort **CSharp** wird in fett geschrieben.  
-```csharp
-class Person
-{
-  public string Name { get; set;}
-}
-```  
+
 Die Eigenschaft *'Name'* setzt oder liefert den Namen der Person. 
