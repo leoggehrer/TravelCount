@@ -165,6 +165,9 @@ namespace TravelCount.Logic.Controllers.Business
 
             travelController.Dispose();
             expenseController.Dispose();
+
+            travelController = null;
+            expenseController = null;
         }
     }
 }
