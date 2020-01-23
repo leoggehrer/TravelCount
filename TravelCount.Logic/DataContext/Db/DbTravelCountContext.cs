@@ -1,9 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using TravelCount.Contracts;
 using TravelCount.Logic.Entities;
 using TravelCount.Logic.Entities.Persistence;
@@ -12,8 +11,18 @@ namespace TravelCount.Logic.DataContext.Db
 {
     internal class DbTravelCountContext : DbContext, IContext, ITravelCountContext
     {
+#if DEBUG
+        //static LoggerFactory object
+        public static readonly ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+        {
+            builder
+                .AddFilter((category, level) =>
+                    category == DbLoggerCategory.Database.Command.Name
+                    && level == LogLevel.Information)
+                .AddDebug();
+        });
+#endif
         private static string ConnectionString { get; set; } = "Data Source=(localdb)\\MSSQLLocalDb;Database=TravelCountDb;Integrated Security=True;";
-
         public IEnumerable<Travel> Travels => TravelSet;
         public IEnumerable<Expense> Expenses => ExpenseSet;
         public DbSet<Travel> TravelSet { get; set; }
@@ -77,8 +86,12 @@ namespace TravelCount.Logic.DataContext.Db
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-
-            optionsBuilder.UseSqlServer(ConnectionString);
+            optionsBuilder
+#if DEBUG        
+                .EnableSensitiveDataLogging()
+                .UseLoggerFactory(loggerFactory)
+#endif
+                .UseSqlServer(ConnectionString);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

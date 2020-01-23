@@ -1,7 +1,5 @@
-﻿using CommonBase.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using CommonBase.Extensions;
 using TravelCount.Contracts.Persistence;
 
 namespace TravelCount.Logic.Entities.Persistence

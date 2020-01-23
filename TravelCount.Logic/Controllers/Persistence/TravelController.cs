@@ -1,6 +1,7 @@
 ﻿//@DomainCode
 //MdStart
 using System.Collections.Generic;
+using System.Linq;
 using TravelCount.Logic.DataContext;
 
 namespace TravelCount.Logic.Controllers.Persistence

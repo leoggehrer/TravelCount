@@ -59,11 +59,11 @@ namespace TravelCount.Logic.Controllers
         public virtual Task<IEnumerable<I>> GetAllAsync()
         {
             return Task.Run<IEnumerable<I>>(() =>
-                Set.Select(i =>
+                Set.Select(e =>
                 {
                     var result = new E();
 
-                    result.CopyProperties(i);
+                    result.CopyProperties(e);
                     return result;
                 }));
         }

@@ -1,8 +1,8 @@
-﻿using CommonBase.Extensions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CommonBase.Extensions;
 using TravelCount.Contracts.Business;
 using TravelCount.Logic.Controllers.Persistence;
 using TravelCount.Logic.DataContext;
@@ -11,7 +11,7 @@ using TravelCount.Logic.Entities.Persistence;
 
 namespace TravelCount.Logic.Controllers.Business
 {
-    internal class TravelExpenseController : Controllers.ControllerObject, Contracts.Client.IControllerAccess<Contracts.Business.ITravelExpense>
+    internal class TravelExpenseController : ControllerObject, Contracts.Client.IControllerAccess<ITravelExpense>
     {
         private TravelController travelController;
         private ExpenseController expenseController;

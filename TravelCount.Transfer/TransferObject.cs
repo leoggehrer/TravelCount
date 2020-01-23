@@ -1,4 +1,5 @@
-﻿namespace TravelCount.Transfer
+﻿//@BaseCode
+namespace TravelCount.Transfer
 {
     public class TransferObject : Contracts.IIdentifiable
     {

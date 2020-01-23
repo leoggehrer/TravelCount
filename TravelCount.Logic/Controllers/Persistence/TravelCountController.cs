@@ -17,7 +17,6 @@ namespace TravelCount.Logic.Controllers.Persistence
         protected TravelCountController(ControllerObject controller)
             : base(controller)
         {
-
         }
     }
 }
